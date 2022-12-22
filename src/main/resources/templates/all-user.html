@@ -117,7 +117,7 @@
                                                             <br>
                                                             <label for="editRole">Role</label>
                                                             <select class="form-select w-100" size="2" id="editRole"
-                                                                    name="checkBoxRoles">
+                                                                    name="checkBoxRoles" multiple>
                                                                 <option th:each="role : ${roles}"
                                                                         th:text="${role.name}"></option>
                                                             </select>
@@ -214,9 +214,9 @@
                                        placeholder="Password">
                                 <br>
                                 <label for="role">Role</label>
-                                <select class="form-select w-100" size="2" id="role" name="checkBoxRoles">
+                                <select class="form-select w-100" size="2" id="role" name="checkBoxRoles" multiple>
                                     <option th:each="role : ${roles}"
-                                            th:text="${role.name}"></option>
+                                            th:text="${role.name}"> </option>
                                 </select>
 
                                 <button type="submit" class="btn btn-success">Add new user</button>
